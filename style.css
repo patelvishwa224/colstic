@@ -1,0 +1,166 @@
+
+    @font-face {
+        font-family:font;
+        src: url('Fontspring-DEMO-rationell-bold.otf');
+    }
+    @font-face {
+        font-family:font1;
+        src: url('Fontspring-DEMO-rationell-extralight-italic.otf');
+    }
+    @font-face {
+        font-family:font2;
+        src: url('Fontspring-DEMO-rationell-extralight.otf');
+    }
+
+    @font-face {
+        font-family:font3;
+        src: url('Fontspring-DEMO-rationell-medium.otf');
+    }
+
+.line1
+{
+background-color: #e5e5f7;
+
+/* opacity: 0.9; */
+    background-image:  linear-gradient(rgb(61, 61, 61), 1px, transparent 2px), linear-gradient(to right, rgb(61, 61, 61) ,1px, black 2px);
+    background-size: 80px 80px;
+}
+.fade_rule {
+    height: 2px;
+    background-color: #E6E6E6;
+    width:100%;
+    margin: 0 auto;
+    background-image: linear-gradient(left , rgb(251, 250, 250) 2%,black 50%, rgb(251, 250, 250) 98%);
+    background-image: -o-linear-gradient(left , rgb(251, 250, 250) 2%, black 50%, rgb(251, 250, 250) 98%);
+    background-image: -moz-linear-gradient(left , rgb(251, 250, 250) 2%, black 50%, rgb(251, 250, 250) 98%);
+    background-image: -webkit-linear-gradient(left , rgb(251, 250, 250) 2%, black 50%, rgb(251, 250, 250) 98%);
+    background-image: -ms-linear-gradient(left , rgb(251, 250, 250) 2%, black 50%, rgb(251, 250, 250) 98%);
+    background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, rgb(251, 250, 250)), color-stop(0.5,black), color-stop(0.98, rgb(251, 250, 250)) );
+}
+.fade_rule2 {
+    height: 2px;
+    background-color: #E6E6E6;
+    width:100%;
+    margin: 0 auto;
+    background-image: linear-gradient(left , rgb(67, 64, 64) 2%, rgb(251, 250, 250) 50%, rgb(67, 64, 64) 98%);
+    background-image: -o-linear-gradient(left , rgb(67, 64, 64) 2%,  rgb(251, 250, 250) 50%, rgb(67, 64, 64) 98%);
+    background-image: -moz-linear-gradient(left , rgb(67, 64, 64) 2%,  rgb(251, 250, 250) 50%, rgb(67, 64, 64) 98%);
+    background-image: -webkit-linear-gradient(left , rgb(67, 64, 64) 2%,  rgb(251, 250, 250) 50%, rgb(67, 64, 64) 98%);
+    background-image: -ms-linear-gradient(left , rgb(67, 64, 64) 2%,  rgb(251, 250, 250) 50%, rgb(67, 64, 64) 98%);
+    background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, rgb(67, 64, 64)), color-stop(0.5, rgb(251, 250, 250)), color-stop(0.98, rgb(251, 250, 250)) );
+}
+.circle
+{
+    height: 150px;
+    margin-top: 150px;
+}
+.flower
+{
+    height: 180px;
+    margin-top: -55px;
+}
+.rotate {
+    animation: rotation 2s;
+  }
+  
+  .linear {
+    animation-timing-function: linear;
+  }
+  
+  .infinite {
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+ .line {
+     width: 100%;
+  
+    position: relative;
+    overflow: hidden;
+   
+}
+ .line span {
+    position: absolute;
+  
+}
+.item
+{
+    transition-duration: 2s;
+}
+
+
+  
+  .button {
+    display:inline-block;
+    height:30px;
+    overflow:hidden;
+    position:relative;
+    transition:0.1s;
+  }
+  
+
+  .label-up {
+    display:block;
+    height:100%;
+    position:relative;
+    top:0%;
+    transition:0.3s;
+  }
+  
+  .button:hover .label-up {
+    top:-100%;
+  }
+
+
+
+
+
+ /* // Button */
+  .go-down-btn {
+   
+      z-index: 1;
+      display: inline-block;
+ }
+  .go-down-btn svg {
+      /* position: relative; */
+      z-index: -1;
+      display: block;
+ }
+  .go-down-btn text {
+      font-size: 11px;
+      transform-origin: center;
+ }
+ /* // Animation */
+  @keyframes rotate-btn {
+      to {
+          transform: rotate(360deg);
+     }
+ }
+  .go-down-btn text {
+      animation: rotate-btn 10s linear infinite;
+ }
+
+
+ .logo {
+
+  animation: appear 0.5s ease-out;
+  animation-delay: 3s; /* Delay the animation for 5 seconds */
+  animation-fill-mode: forwards; /* Keeps the final state of the animation */
+}
+
+@keyframes appear {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(18%);
+}
+}
